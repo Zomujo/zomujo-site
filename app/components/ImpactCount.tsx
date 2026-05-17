@@ -16,6 +16,7 @@ export default function ImpactCount({
   const [count, setCount] = useState(0);
   const wrapperRef = useRef<HTMLSpanElement | null>(null);
   const animationRef = useRef(0);
+  const hasAnimatedRef = useRef(false);
 
   useEffect(() => {
     const node = wrapperRef.current;
@@ -41,8 +42,10 @@ export default function ImpactCount({
 
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0]?.isIntersecting) {
+        if (entries[0]?.isIntersecting && !hasAnimatedRef.current) {
+          hasAnimatedRef.current = true;
           animate();
+          observer.disconnect();
         }
       },
       { threshold: 0.4 }
