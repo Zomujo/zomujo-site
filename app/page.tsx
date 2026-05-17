@@ -1,65 +1,58 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="page-shell">
+      <header className="site-header">
+        <div className="container site-header__inner">
+          <div className="logo">
+            <img src="/zomujo-logo.png" alt="Zomujo Foundation" width={40} height={40} />
+            <span>Zomujo Foundation</span>
+          </div>
+          <nav className="nav" aria-label="Primary">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/health">Health</a>
+            <a href="/education">Education</a>
+            <a href="/innovation">Digital Innovation</a>
+            <a href="/community">Community Systems</a>
+            <a href="/livelihoods">Livelihoods</a>
+            <a href="/climate">Climate</a>
+            <a href="/research">Research</a>
+            <a href="/partner">Partner</a>
+            <a href="/contact">Contact</a>
+          </nav>
+          <a className="cta" href="/partner">
+            Partner With Us
+          </a>
+        </div>
+      </header>
+      <main className="container" style={{ padding: "80px 0" }}>
+        <h1
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "clamp(2.6rem, 5vw, 4rem)",
+            lineHeight: 1.05,
+            marginBottom: "16px",
+            color: "var(--ink)",
+          }}
+        >
+          Technology. Community. Impact.
+        </h1>
+        <p style={{ maxWidth: 640, color: "var(--slate)" }}>
+          Zomujo Foundation builds the systems that connect people to better
+          health, education, livelihoods, and resilience. Powered by technology.
+          Rooted in community.
+        </p>
+      </main>
+      <footer className="site-footer">
+        <div className="container site-footer__inner">
+          <strong>Join Us</strong>
+          <p>
+            Whether you are a funder, a government agency, a technology company,
+            a researcher, or a community leader, there is a role for you in the
+            work we do.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </footer>
     </div>
   );
 }
