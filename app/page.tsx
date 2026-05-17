@@ -1,3 +1,5 @@
+import ImpactCount from "./components/ImpactCount";
+
 export default function Home() {
   return (
     <div className="page-shell">
@@ -149,19 +151,53 @@ export default function Home() {
           <div className="impact-grid">
             <div className="impact-card">
               <span className="impact-card__label">Communities Reached</span>
-              <strong className="impact-card__value">XX</strong>
+              <ImpactCount value={120} suffix="+" />
             </div>
             <div className="impact-card">
               <span className="impact-card__label">Programmes Delivered</span>
-              <strong className="impact-card__value">XX</strong>
+              <ImpactCount value={45} suffix="+" />
             </div>
             <div className="impact-card">
               <span className="impact-card__label">Partners and Collaborators</span>
-              <strong className="impact-card__value">XX</strong>
+              <ImpactCount value={30} suffix="+" />
             </div>
             <div className="impact-card">
               <span className="impact-card__label">Countries of Operation</span>
-              <strong className="impact-card__value">XX</strong>
+              <ImpactCount value={4} />
+            </div>
+          </div>
+        </section>
+
+        <section className="why" aria-labelledby="why-title">
+          <div className="why__content">
+            <span className="section-kicker">Why Zomujo?</span>
+            <h2 id="why-title">A systems organization, built for wellbeing</h2>
+            <p>
+              Zomujo is a word from the Ga language of Ghana, meaning good health
+              or wellbeing. The name reflects our founding commitment to the
+              total wellbeing of individuals and communities. That commitment
+              has grown from health into education, livelihoods, digital access,
+              climate resilience, and evidence based policy.
+            </p>
+            <p>
+              We are not a single issue organisation. We are a systems
+              organisation. We build the connective tissue between technology
+              and community that makes development outcomes durable,
+              measurable, and sustainable.
+            </p>
+          </div>
+          <div className="why__panel">
+            <div className="why__panel-card">
+              <strong>Meaning of Zomujo</strong>
+              <p>Good health or wellbeing, rooted in Ga language.</p>
+            </div>
+            <div className="why__panel-card">
+              <strong>Systems first</strong>
+              <p>We build the infrastructure that makes programmes durable.</p>
+            </div>
+            <div className="why__panel-card">
+              <strong>Community centered</strong>
+              <p>Technology that starts with the realities of local life.</p>
             </div>
           </div>
         </section>
