@@ -76,7 +76,7 @@ export default function Home() {
             </p>
           </div>
           <div className="focus-grid">
-            <a className="focus-card" href="/health">
+            <a className="focus-card focus-card--featured focus-pos--center" href="/health">
               <div className="focus-card__top">
                 <span>01</span>
                 <span className="focus-card__tag">Health and Wellbeing</span>
@@ -84,7 +84,7 @@ export default function Home() {
               <h3>Health and Wellbeing Systems</h3>
               <p>Digital tools and frontline support that bring care closer.</p>
             </a>
-            <a className="focus-card" href="/education">
+            <a className="focus-card focus-pos--top-left" href="/education">
               <div className="focus-card__top">
                 <span>02</span>
                 <span className="focus-card__tag">Education</span>
@@ -92,7 +92,7 @@ export default function Home() {
               <h3>Education, Skills and Youth Development</h3>
               <p>Learning pathways that prepare young people for opportunity.</p>
             </a>
-            <a className="focus-card" href="/innovation">
+            <a className="focus-card focus-pos--top-right" href="/innovation">
               <div className="focus-card__top">
                 <span>03</span>
                 <span className="focus-card__tag">Innovation</span>
@@ -100,7 +100,7 @@ export default function Home() {
               <h3>Digital Innovation and Access</h3>
               <p>Inclusive technology ecosystems that bridge the access gap.</p>
             </a>
-            <a className="focus-card" href="/community">
+            <a className="focus-card focus-pos--middle-left" href="/community">
               <div className="focus-card__top">
                 <span>04</span>
                 <span className="focus-card__tag">Community</span>
@@ -108,7 +108,7 @@ export default function Home() {
               <h3>Community Systems and Social Protection</h3>
               <p>Data-backed safety nets that reach people where they live.</p>
             </a>
-            <a className="focus-card" href="/livelihoods">
+            <a className="focus-card focus-pos--middle-right" href="/livelihoods">
               <div className="focus-card__top">
                 <span>05</span>
                 <span className="focus-card__tag">Livelihoods</span>
@@ -116,7 +116,7 @@ export default function Home() {
               <h3>Economic Empowerment and Livelihoods</h3>
               <p>Market access and financial tools that unlock stability.</p>
             </a>
-            <a className="focus-card" href="/climate">
+            <a className="focus-card focus-pos--bottom-left" href="/climate">
               <div className="focus-card__top">
                 <span>06</span>
                 <span className="focus-card__tag">Climate</span>
@@ -124,7 +124,7 @@ export default function Home() {
               <h3>Climate, Environment and Resilience</h3>
               <p>Resilience systems that protect communities and ecosystems.</p>
             </a>
-            <a className="focus-card" href="/research">
+            <a className="focus-card focus-pos--bottom-right" href="/research">
               <div className="focus-card__top">
                 <span>07</span>
                 <span className="focus-card__tag">Research</span>
@@ -132,6 +132,37 @@ export default function Home() {
               <h3>Research, Data and Policy Influence</h3>
               <p>Evidence that shapes policy and drives sustainable change.</p>
             </a>
+          </div>
+        </section>
+
+        <section className="impact" aria-labelledby="impact-title">
+          <div className="section-heading">
+            <div>
+              <span className="section-kicker">Impact Snapshot</span>
+              <h2 id="impact-title">Momentum you can measure</h2>
+            </div>
+            <p>
+              We track outcomes across the systems we strengthen. These figures
+              will grow as programmes expand and partnerships deepen.
+            </p>
+          </div>
+          <div className="impact-grid">
+            <div className="impact-card">
+              <span className="impact-card__label">Communities Reached</span>
+              <strong className="impact-card__value">XX</strong>
+            </div>
+            <div className="impact-card">
+              <span className="impact-card__label">Programmes Delivered</span>
+              <strong className="impact-card__value">XX</strong>
+            </div>
+            <div className="impact-card">
+              <span className="impact-card__label">Partners and Collaborators</span>
+              <strong className="impact-card__value">XX</strong>
+            </div>
+            <div className="impact-card">
+              <span className="impact-card__label">Countries of Operation</span>
+              <strong className="impact-card__value">XX</strong>
+            </div>
           </div>
         </section>
       </main>
