@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --sand: #f8f4ef;
-  --ink: #121517;
-  --teal: #0b4f4a;
-  --gold: #f3b547;
-  --clay: #d0684f;
-  --leaf: #2e8f5b;
-  --slate: #4a5560;
-  --mist: #e6ecea;
-  --sky: #d7e9f2;
-  --line: #d9d2c7;
+  --sand: #f7f9ff;
+  --ink: #0d1117;
+  --teal: #1f4ea8;
+  --gold: #f2b54c;
+  --clay: #d46a52;
+  --leaf: #2f8f6b;
+  --slate: #485564;
+  --mist: #e1e8f3;
+  --sky: #dbe8ff;
+  --line: #d3dceb;
 
   --background: var(--sand);
   --foreground: var(--ink);
@@ -69,11 +69,12 @@ a {
   display: flex;
   flex-direction: column;
   background: radial-gradient(
-      circle at 10% 10%,
-      rgba(243, 181, 71, 0.2),
+      circle at 15% 12%,
+      rgba(31, 78, 168, 0.22),
       transparent 45%
     ),
-    radial-gradient(circle at 90% 0%, rgba(46, 143, 91, 0.15), transparent 40%),
+    radial-gradient(circle at 90% 0%, rgba(219, 232, 255, 0.8), transparent 42%),
+    radial-gradient(circle at 85% 80%, rgba(31, 78, 168, 0.12), transparent 48%),
     var(--sand);
 }
 
