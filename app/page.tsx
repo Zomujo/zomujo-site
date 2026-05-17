@@ -25,23 +25,115 @@ export default function Home() {
           </a>
         </div>
       </header>
-      <main className="container" style={{ padding: "80px 0" }}>
-        <h1
-          style={{
-            fontFamily: "var(--font-display)",
-            fontSize: "clamp(2.6rem, 5vw, 4rem)",
-            lineHeight: 1.05,
-            marginBottom: "16px",
-            color: "var(--ink)",
-          }}
-        >
-          Technology. Community. Impact.
-        </h1>
-        <p style={{ maxWidth: 640, color: "var(--slate)" }}>
-          Zomujo Foundation builds the systems that connect people to better
-          health, education, livelihoods, and resilience. Powered by technology.
-          Rooted in community.
-        </p>
+      <main className="container" style={{ padding: "96px 0 48px" }}>
+        <section className="hero">
+          <div className="hero__content">
+            <span className="hero__eyebrow">Zomujo Foundation</span>
+            <h1>Technology. Community. Impact.</h1>
+            <p>
+              Zomujo Foundation builds the systems that connect people to better
+              health, education, livelihoods, and resilience. Powered by
+              technology. Rooted in community.
+            </p>
+            <div className="hero__actions">
+              <a className="cta" href="/work">
+                Explore Our Work
+              </a>
+              <a className="cta cta--ghost" href="/partner">
+                Partner With Us
+              </a>
+            </div>
+          </div>
+          <div className="hero__media">
+            <img
+              src="/hero-zomujo.jpg"
+              alt="Community health screening and local engagement"
+            />
+            <div className="hero__badge">
+              Building technology enabled, community driven systems.
+            </div>
+          </div>
+        </section>
+
+        <section className="mission">
+          <p>
+            We design and deploy technology enabled, community driven systems
+            that strengthen how people live, learn, earn, and adapt across
+            Africa and beyond.
+          </p>
+        </section>
+
+        <section className="focus" aria-labelledby="focus-title">
+          <div className="section-heading">
+            <div>
+              <span className="section-kicker">Our Focus Areas</span>
+              <h2 id="focus-title">Where we concentrate our work</h2>
+            </div>
+            <p>
+              Seven interconnected systems shape well-being. We build the digital
+              and community infrastructure that makes each one stronger and more
+              resilient.
+            </p>
+          </div>
+          <div className="focus-grid">
+            <a className="focus-card" href="/health">
+              <div className="focus-card__top">
+                <span>01</span>
+                <span className="focus-card__tag">Health and Wellbeing</span>
+              </div>
+              <h3>Health and Wellbeing Systems</h3>
+              <p>Digital tools and frontline support that bring care closer.</p>
+            </a>
+            <a className="focus-card" href="/education">
+              <div className="focus-card__top">
+                <span>02</span>
+                <span className="focus-card__tag">Education</span>
+              </div>
+              <h3>Education, Skills and Youth Development</h3>
+              <p>Learning pathways that prepare young people for opportunity.</p>
+            </a>
+            <a className="focus-card" href="/innovation">
+              <div className="focus-card__top">
+                <span>03</span>
+                <span className="focus-card__tag">Innovation</span>
+              </div>
+              <h3>Digital Innovation and Access</h3>
+              <p>Inclusive technology ecosystems that bridge the access gap.</p>
+            </a>
+            <a className="focus-card" href="/community">
+              <div className="focus-card__top">
+                <span>04</span>
+                <span className="focus-card__tag">Community</span>
+              </div>
+              <h3>Community Systems and Social Protection</h3>
+              <p>Data-backed safety nets that reach people where they live.</p>
+            </a>
+            <a className="focus-card" href="/livelihoods">
+              <div className="focus-card__top">
+                <span>05</span>
+                <span className="focus-card__tag">Livelihoods</span>
+              </div>
+              <h3>Economic Empowerment and Livelihoods</h3>
+              <p>Market access and financial tools that unlock stability.</p>
+            </a>
+            <a className="focus-card" href="/climate">
+              <div className="focus-card__top">
+                <span>06</span>
+                <span className="focus-card__tag">Climate</span>
+              </div>
+              <h3>Climate, Environment and Resilience</h3>
+              <p>Resilience systems that protect communities and ecosystems.</p>
+            </a>
+            <a className="focus-card" href="/research">
+              <div className="focus-card__top">
+                <span>07</span>
+                <span className="focus-card__tag">Research</span>
+              </div>
+              <h3>Research, Data and Policy Influence</h3>
+              <p>Evidence that shapes policy and drives sustainable change.</p>
+            </a>
+          </div>
+        </section>
       </main>
       <footer className="site-footer">
         <div className="container site-footer__inner">
