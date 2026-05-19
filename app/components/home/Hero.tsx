@@ -3,7 +3,7 @@ import DisabledLink from "./DisabledLink";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero pt-8 lg:pt-0">
       <div className="hero__content">
         <span className="hero__eyebrow">Zomujo Foundation</span>
         <h1>Technology. Community. Impact.</h1>
