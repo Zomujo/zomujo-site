@@ -6,12 +6,14 @@ type ImpactCountProps = {
   value: number;
   suffix?: string;
   duration?: number;
+  className?: string;
 };
 
 export default function ImpactCount({
   value,
   suffix = "",
   duration = 1200,
+  className = "impact-card__value",
 }: ImpactCountProps) {
   const [count, setCount] = useState(0);
   const wrapperRef = useRef<HTMLSpanElement | null>(null);
@@ -60,7 +62,7 @@ export default function ImpactCount({
   }, [value, duration]);
 
   return (
-    <strong className="impact-card__value" ref={wrapperRef}>
+    <strong className={className} ref={wrapperRef}>
       {count.toLocaleString()}
       {suffix}
     </strong>
