@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <div className="page-shell">
       <SiteHeader />
-      <main className="container py-12 pt-24">
-        <Hero />
+      <Hero />
+      <main className="container py-12 pt-16">
         <MissionBar />
         <FocusAreas />
         <ImpactSnapshot />
