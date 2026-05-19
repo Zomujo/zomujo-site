@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import DisabledLink from "./DisabledLink";
 import SectionHeader from "./SectionHeader";
 
 const partners = [
@@ -45,12 +45,12 @@ export default function PartnersBand() {
         description="We work alongside governments, communities, researchers, and private sector partners to design and sustain systems that improve wellbeing."
         className="grid gap-3 md:grid-cols-[1fr_auto] md:items-end"
         action={
-          <Link
+          <DisabledLink
             href="/partner"
             className="justify-self-start border border-[color:var(--line)] px-5 py-2 text-sm font-semibold text-[var(--teal)] transition hover:border-[color:var(--teal)] hover:bg-white md:justify-self-end"
           >
             Become a Partner
-          </Link>
+          </DisabledLink>
         }
       />
 

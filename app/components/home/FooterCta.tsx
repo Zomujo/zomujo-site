@@ -1,4 +1,4 @@
-import Link from "next/link";
+import DisabledLink from "./DisabledLink";
 
 export default function FooterCta() {
   return (
@@ -22,12 +22,12 @@ export default function FooterCta() {
           </p>
         </div>
         <div className="flex flex-wrap gap-3 md:justify-end">
-          <Link className="cta" href="/partner">
+          <DisabledLink className="cta" href="/partner">
             Partner With Us
-          </Link>
-          <Link className="cta cta--ghost" href="/contact">
+          </DisabledLink>
+          <DisabledLink className="cta cta--ghost" href="/contact">
             Contact Us
-          </Link>
+          </DisabledLink>
         </div>
       </div>
     </section>

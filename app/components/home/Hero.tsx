@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import DisabledLink from "./DisabledLink";
 
 export default function Hero() {
   return (
@@ -13,12 +13,12 @@ export default function Hero() {
           Rooted in community.
         </p>
         <div className="hero__actions">
-          <Link className="cta" href="/work">
+          <DisabledLink className="cta" href="/work">
             Explore Our Work
-          </Link>
-          <Link className="cta cta--ghost" href="/partner">
+          </DisabledLink>
+          <DisabledLink className="cta cta--ghost" href="/partner">
             Partner With Us
-          </Link>
+          </DisabledLink>
         </div>
       </div>
       <div className="hero__media">

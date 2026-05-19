@@ -1,4 +1,4 @@
-import Link from "next/link";
+import DisabledLink from "./DisabledLink";
 import SectionHeader from "./SectionHeader";
 
 const focusAreas = [
@@ -73,7 +73,7 @@ export default function FocusAreas() {
       />
       <div className="grid gap-6 min-[961px]:grid-cols-3 min-[961px]:[column-gap:12px] min-[961px]:[row-gap:32px] max-[960px]:grid-cols-2 max-[680px]:grid-cols-1">
         {focusAreas.map((area) => (
-          <Link
+          <DisabledLink
             className={`relative flex h-[220px] flex-col gap-3.5 rounded-[var(--radius-md)] border border-[var(--line)] bg-[linear-gradient(145deg,#ffffff,#f1f6ff)] px-[18px] pt-4 pb-[18px] text-[var(--ink)] shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:border-[color-mix(in_srgb,var(--teal)_24%,var(--line))] hover:shadow-[0_24px_60px_rgba(7,34,80,0.16)] ${area.positionClass} ${
               area.featured
                 ? "border-[color:color-mix(in_srgb,var(--teal)_26%,var(--line))] bg-[linear-gradient(145deg,#ffffff,#e8f0ff)]"
@@ -98,7 +98,7 @@ export default function FocusAreas() {
               {area.title}
             </h3>
             <p className="m-0 text-[0.95rem] text-[var(--slate)]">{area.body}</p>
-          </Link>
+          </DisabledLink>
         ))}
       </div>
     </section>

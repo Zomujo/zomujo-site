@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import DisabledLink from "./DisabledLink";
 import SectionHeader from "./SectionHeader";
 
 const posts = [
@@ -69,12 +69,12 @@ export default function LatestNews() {
             <p className="max-w-[60ch] text-[0.98rem] leading-7 text-[var(--slate)]">
               {featured.body}
             </p>
-            <Link
+            <DisabledLink
               className="font-semibold text-[var(--teal)] underline-offset-4 hover:underline"
               href={featured.href}
             >
               Read full story
-            </Link>
+            </DisabledLink>
           </div>
         </article>
 
@@ -101,12 +101,12 @@ export default function LatestNews() {
                 <h3 className="font-[family-name:var(--font-display)] text-[1.1rem] leading-tight text-[var(--ink)]">
                   {post.title}
                 </h3>
-                <Link
+                <DisabledLink
                   className="mt-1 text-sm font-semibold text-[var(--teal)] underline-offset-4 hover:underline"
                   href={post.href}
                 >
                   Read more
-                </Link>
+                </DisabledLink>
               </div>
             </article>
           ))}
