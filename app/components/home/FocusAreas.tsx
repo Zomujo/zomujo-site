@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SectionHeader from "./SectionHeader";
 
 const focusAreas = [
   {
@@ -7,7 +8,8 @@ const focusAreas = [
     tag: "Health and Wellbeing",
     title: "Health and Wellbeing Systems",
     body: "Digital tools and frontline support that bring care closer.",
-    className: "focus-card--featured focus-pos--center",
+    featured: true,
+    positionClass: "lg:col-start-2 lg:row-start-2",
   },
   {
     href: "/education",
@@ -15,7 +17,7 @@ const focusAreas = [
     tag: "Education",
     title: "Education, Skills and Youth Development",
     body: "Learning pathways that prepare young people for opportunity.",
-    className: "focus-pos--top-left",
+    positionClass: "lg:col-start-1 lg:row-start-1 lg:translate-x-[108px]",
   },
   {
     href: "/innovation",
@@ -23,7 +25,7 @@ const focusAreas = [
     tag: "Innovation",
     title: "Digital Innovation and Access",
     body: "Inclusive technology ecosystems that bridge the access gap.",
-    className: "focus-pos--top-right",
+    positionClass: "lg:col-start-3 lg:row-start-1 lg:-translate-x-[108px]",
   },
   {
     href: "/community",
@@ -31,7 +33,7 @@ const focusAreas = [
     tag: "Community",
     title: "Community Systems and Social Protection",
     body: "Data-backed safety nets that reach people where they live.",
-    className: "focus-pos--middle-left",
+    positionClass: "lg:col-start-1 lg:row-start-2",
   },
   {
     href: "/livelihoods",
@@ -39,7 +41,7 @@ const focusAreas = [
     tag: "Livelihoods",
     title: "Economic Empowerment and Livelihoods",
     body: "Market access and financial tools that unlock stability.",
-    className: "focus-pos--middle-right",
+    positionClass: "lg:col-start-3 lg:row-start-2",
   },
   {
     href: "/climate",
@@ -47,7 +49,7 @@ const focusAreas = [
     tag: "Climate",
     title: "Climate, Environment and Resilience",
     body: "Resilience systems that protect communities and ecosystems.",
-    className: "focus-pos--bottom-left",
+    positionClass: "lg:col-start-1 lg:row-start-3 lg:translate-x-[108px]",
   },
   {
     href: "/research",
@@ -55,37 +57,47 @@ const focusAreas = [
     tag: "Research",
     title: "Research, Data and Policy Influence",
     body: "Evidence that shapes policy and drives sustainable change.",
-    className: "focus-pos--bottom-right",
+    positionClass: "lg:col-start-3 lg:row-start-3 lg:-translate-x-[108px]",
   },
 ];
 
 export default function FocusAreas() {
   return (
-    <section className="focus" aria-labelledby="focus-title">
-      <div className="section-heading">
-        <div>
-          <span className="section-kicker">Our Focus Areas</span>
-          <h2 id="focus-title">Where we concentrate our work</h2>
-        </div>
-        <p>
-          Seven interconnected systems shape well-being. We build the digital
-          and community infrastructure that makes each one stronger and more
-          resilient.
-        </p>
-      </div>
-      <div className="focus-grid">
+    <section className="mt-[72px] grid gap-8" aria-labelledby="focus-title">
+      <SectionHeader
+        kicker="Our Focus Areas"
+        title="Where we concentrate our work"
+        titleId="focus-title"
+        description="Seven interconnected systems shape well-being. We build the digital and community infrastructure that makes each one stronger and more resilient."
+        className="section-heading"
+      />
+      <div className="grid gap-6 min-[961px]:grid-cols-3 min-[961px]:[column-gap:12px] min-[961px]:[row-gap:32px] max-[960px]:grid-cols-2 max-[680px]:grid-cols-1">
         {focusAreas.map((area) => (
           <Link
-            className={`focus-card ${area.className}`}
+            className={`relative flex h-[220px] flex-col gap-3.5 rounded-[var(--radius-md)] border border-[var(--line)] bg-[linear-gradient(145deg,#ffffff,#f1f6ff)] px-[18px] pt-4 pb-[18px] text-[var(--ink)] shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:border-[color-mix(in_srgb,var(--teal)_24%,var(--line))] hover:shadow-[0_24px_60px_rgba(7,34,80,0.16)] ${area.positionClass} ${
+              area.featured
+                ? "border-[color:color-mix(in_srgb,var(--teal)_26%,var(--line))] bg-[linear-gradient(145deg,#ffffff,#e8f0ff)]"
+                : ""
+            }`}
             href={area.href}
             key={area.href}
           >
-            <div className="focus-card__top">
+            {area.featured ? (
+              <span
+                aria-hidden
+                className="pointer-events-none absolute inset-[18px] rounded-[var(--radius-md)] border border-dashed border-[rgba(31,78,168,0.25)]"
+              />
+            ) : null}
+            <div className="flex justify-between text-[0.95rem] font-semibold text-[var(--slate)]">
               <span>{area.number}</span>
-              <span className="focus-card__tag">{area.tag}</span>
+              <span className="border-b border-[rgba(31,78,168,0.3)] pb-0.5 text-[0.8rem] tracking-[0.02em] text-[var(--teal)]">
+                {area.tag}
+              </span>
             </div>
-            <h3>{area.title}</h3>
-            <p>{area.body}</p>
+            <h3 className="m-0 font-[family-name:var(--font-display)] text-[1.05rem] leading-snug">
+              {area.title}
+            </h3>
+            <p className="m-0 text-[0.95rem] text-[var(--slate)]">{area.body}</p>
           </Link>
         ))}
       </div>

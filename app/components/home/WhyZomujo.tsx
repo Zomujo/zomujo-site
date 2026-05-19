@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionHeader from "./SectionHeader";
 
 const stories = [
   {
@@ -20,20 +21,12 @@ const stories = [
 export default function WhyZomujo() {
   return (
     <section className="mt-22 grid gap-8" aria-labelledby="why-title">
-      <div className="max-w-3xl">
-        <span className="section-kicker">Why Zomujo?</span>
-        <h2
-          className="mt-3 font-[family-name:var(--font-display)] text-[2rem] leading-tight text-[var(--ink)] md:text-[2.75rem]"
-          id="why-title"
-        >
-          A systems organization, built for wellbeing
-        </h2>
-        <p className="mt-4 text-[1.05rem] leading-7 text-[var(--slate)]">
-          Zomujo is a word from the Ga language of Ghana, meaning good health or
-          wellbeing. We build the connective tissue between technology and
-          community so outcomes are durable, measurable, and sustainable.
-        </p>
-      </div>
+      <SectionHeader
+        kicker="Why Zomujo?"
+        title="A systems organization, built for wellbeing"
+        titleId="why-title"
+        description="Zomujo is a word from the Ga language of Ghana, meaning good health or wellbeing. We build the connective tissue between technology and community so outcomes are durable, measurable, and sustainable."
+      />
 
       <div className="grid gap-8">
         {stories.map((story, index) => (

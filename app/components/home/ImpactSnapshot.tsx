@@ -1,4 +1,5 @@
 import ImpactCount from "../ImpactCount";
+import SectionHeader from "./SectionHeader";
 
 const metrics = [
   { label: "Communities Reached", value: 120, suffix: "+" },
@@ -10,16 +11,13 @@ const metrics = [
 export default function ImpactSnapshot() {
   return (
     <section className="impact" aria-labelledby="impact-title">
-      <div className="section-heading">
-        <div>
-          <span className="section-kicker">Impact Snapshot</span>
-          <h2 id="impact-title">Momentum you can measure</h2>
-        </div>
-        <p>
-          We track outcomes across the systems we strengthen. These figures will
-          grow as programmes expand and partnerships deepen.
-        </p>
-      </div>
+      <SectionHeader
+        kicker="Impact Snapshot"
+        title="Momentum you can measure"
+        titleId="impact-title"
+        description="We track outcomes across the systems we strengthen. These figures will grow as programmes expand and partnerships deepen."
+        className="section-heading"
+      />
       <div className="impact-grid">
         {metrics.map((metric) => (
           <div className="impact-card" key={metric.label}>
